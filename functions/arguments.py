@@ -1,9 +1,9 @@
 def yearOfBirth(name,age):
-    year = 2023 - age
-    print(f"hello {name},you were born in {year}")
+    # year = 2023 - age
+    print(f"hello {name},you were born in {age}")
 
-def myCountry(country=" Kenya"):
-    print(f"Hello you are from {country}")
+def myCountry(country=" Kenya",age=20):
+    print(f"Hello you are from {country} and you are {age} years old")
 
 
 # a function that accept any number of argument
@@ -48,3 +48,13 @@ def concatenate_kwargs(**kwargs):
         name+=n
     return name
     
+
+
+def find_smallest_element(numbers):
+    if not numbers:
+        raise ValueError("Input list is empty")
+    smallest_element = numbers[0]
+    for number in numbers:
+        if number < smallest_element:
+            smallest_element = number
+    return smallest_element
